@@ -28,6 +28,18 @@ def require_user(func):
 
     return wrapper
 
+
+@app.route("/", methods=["GET"])
+async def client():
+    """
+    Get something from session.
+    """
+    if session.get("user_id"):
+        return "It works"
+    else:
+        return abort(404)
+
+
 @app.websocket("/ws")
 @require_user
 async def ws():
