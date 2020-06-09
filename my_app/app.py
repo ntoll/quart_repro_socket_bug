@@ -37,7 +37,7 @@ async def client():
     if session.get("user_id"):
         return "It works"
     else:
-        return abort(404)
+        abort(404)
 
 
 @app.websocket("/ws")
