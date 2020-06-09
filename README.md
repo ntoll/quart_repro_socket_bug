@@ -9,3 +9,5 @@ Run the broken test suite with:
 ```
 $ pytest
 ```
+
+HTTP session related tests work, the websocket one doesn't. :-(
